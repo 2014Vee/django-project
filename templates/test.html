@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+    </head>
+    <script src="js/jquery-1.7.2.js"></script>
+    <script type="text/javascript">
+        function upd() {
+            $.ajax({
+                type: "GET",
+                data: "a=1",
+                url: "http://127.0.0.1:8000/test/",
+                success: function(data) {
+                    console.log(data);
+                    console.log(data.code);
+                    console.log(data.msg);
+                    console.log(data.data);
+                    //alert(result)
+                }
+            });
+        }
+    </script>
+    <body>
+        <!--获取-->
+        <button id="btn2" onclick="upd()">Get request 获取</button>
+    </body>
+
+</html>
